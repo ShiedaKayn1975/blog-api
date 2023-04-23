@@ -33,7 +33,6 @@ gem 'jsonapi-authorization', github: 'matteolc/jsonapi-authorization'
 
 gem 'listen', '~> 3.2'
 gem 'aws-sdk-s3'
-gem 'puma-daemon', require: false
 
 group :development, :test do
   gem 'pry-rails'
