@@ -18,6 +18,6 @@ class Api::V1::PostsController < Api::V1::ApiController
   private
   
   def post_params
-    params.require(:data).require(:attributes).permit(:title, :content, :brief)
+    params.require(:data).require(:attributes).permit(:title, :content, :brief, :slug)
   end
 end
