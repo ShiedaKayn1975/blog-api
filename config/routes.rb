@@ -6,6 +6,13 @@ Rails.application.routes.draw do
       get  'profile',to: 'sessions#profile'
 
       post 'direct_uploads' , to: 'direct_uploads#create'
+      jsonapi_resources :posts
+      jsonapi_resources :tags
+
+      namespace :public do
+        jsonapi_resources :posts
+        jsonapi_resources :tags
+      end
     end
   end
 end
