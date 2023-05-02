@@ -6,4 +6,8 @@ class Api::V1::Public::PostResource < JSONAPI::Resource
   def tags
     @model.tags.as_json
   end
+
+  filter :slug, apply: ->(records, value, _) {
+    records.where(slug: value)
+  }
 end
