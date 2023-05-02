@@ -8,5 +8,5 @@ class Post < ApplicationRecord
     status = "active"
   end
 
-  default_scope where(:status => "active")
+  default_scope { where(status: "active") }
 end
