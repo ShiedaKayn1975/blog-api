@@ -7,4 +7,6 @@ class Post < ApplicationRecord
   before_create do
     status = "active"
   end
+
+  default_scope where(:status => "active")
 end
